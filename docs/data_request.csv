@@ -1,0 +1,465 @@
+sheet_name|variable|type|description|group
+socioeconomic_social capital||categorical|Does your family have a car?|Socioeconomic
+socioeconomic_social capital||categorical|Does your child have his / her own room?|Socioeconomic
+socioeconomic_social capital||categorical|During the past year, did you travel away on holiday|Socioeconomic
+socioeconomic_social capital||categorical|How many computers do you have in your household|Socioeconomic
+socioeconomic_social capital||categorical|What is your current civil(marital) status?|Socioeconomic
+socioeconomic_social capital||categorical|Are you (who are you living with):|Socioeconomic
+socioeconomic_social capital||categorical|Has your marital status changed in the last five years?|Socioeconomic
+socioeconomic_social capital||categorical|If yes, please state how your marital status has changed|Socioeconomic
+socioeconomic_social capital||categorical|What is your current employment status?|Socioeconomic
+socioeconomic_social capital||categorical|Has your employment status changed in the last five years?|Socioeconomic
+socioeconomic_social capital||categorical|If yes, please state how your employment status has changed.|Socioeconomic
+socioeconomic_social capital||character|Please specify how your employment status has changed|Socioeconomic
+socioeconomic_social capital||categorical|Has the employment status of your child/s father changed in the last five years?|Socioeconomic
+socioeconomic_social capital||categorical|If yes, please state how the employment status of your childs father has changed|Socioeconomic
+socioeconomic_social capital||character|Please specify how your employment status has changed|Socioeconomic
+socioeconomic_social capital||categorical|How well would you say your family is managing financially these days.|Socioeconomic
+socioeconomic_social capital||categorical|Compared to five years ago,how is your family doing financially now?|Socioeconomic
+socioeconomic_social capital||double|Family Affluence Scale (FAS II) continuous|Socioeconomic
+socioeconomic_social capital||categorical|Family Affluence Scale (FAS II) categorical|Socioeconomic
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: political parties|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: trade unions|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: environmental groups|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: parent-teacher association|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: tenants or neighbourhood group|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: arts or music group|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: religious group or church organisation|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: charity|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: youth group|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: womens institute|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: social club|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: sports club|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: playgroup|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?:  None|Social_capital
+socioeconomic_social capital|hs_enjoy_area|integer|How much do you agree with the following statement:This area is a place I enjoy living in|Social_capital
+socioeconomic_social capital|hs_help_neigh|categorical|How much do you agree with the following statement:It is easy to get practical help from the neighbours|Social_capital
+socioeconomic_social capital|hs_trust_neigh|categorical|How much do you agree with the following statement:Most people can be trusted in my neighbourhood|Social_capital
+socioeconomic_social capital|hs_ask_advice|categorical|How much do you agree with the following statement:There are people I can turn to for advice|Social_capital
+socioeconomic_social capital|hs_contact_fam|categorical|How often do you have contact with your friends and /or family?|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: political parties|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: trade unions|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: environmental groups|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: parent-teacher association|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: tenants or neighbourhood group|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: arts or music group|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: religious group or church organisation|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: charity|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: youth group|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: womens institute|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: social club|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: sports club|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?: playgroup|Social_capital
+socioeconomic_social capital||bool|Do you regularly join in the activities of any of these organisations?:  None|Social_capital
+socioeconomic_social capital||byte|Participation in organizations|Social_capital
+socioeconomic_social capital||categorical|Participation in organizations, 3cat|Social_capital
+socioeconomic_social capital|contactfam_3cat|string|How often do you have contact with your friends and /or family?|Social_capital
+socioeconomic_social capital|contactfam_3cat_num|categorical|How often do you have contact with your friends and /or family?, 3cat|Social_capital
+tobacco|hs_tob|integer|Which of the following best describes your consumption of tobacco?|tobacco
+tobacco|hs_cig_w|integer|How many cigarettes per week in total do you smoke?|tobacco
+tobacco|hs_cig_whm|integer|How many cigarettes per week on average do you smoke inside the home?|tobacco
+tobacco|hs_smk_partner|integer|Does your partner smoke?|tobacco
+tobacco|hs_cig_partner_w|integer|How many cigarettes per week in total does your partner smoke?|tobacco
+tobacco|hs_cig_partner_whm|integer|How many cigarettes per week, does your partner smoke inside the home?|tobacco
+tobacco|hs_smk_oth1|integer|Does anyone else smoke in your home ?|tobacco
+tobacco|hs_cig_oth1_whm|integer|How many cigarettes per week on average does this person smoke inside the home?|tobacco
+tobacco|hs_cig_oth2|integer|Do any further people smoke at your home?|tobacco
+tobacco|hs_cig_oth2_whm|integer|How many cigarettes per week on average does this person smoke inside the home?|tobacco
+tobacco|hs_cin_smk|integer|Do you sometimes go to other indoor places with your child where people smoke ?|tobacco
+tobacco|hs_cin_smk_w|integer|How many times per week?|tobacco
+tobacco|hs_smk_parents|string|Smoking status of parents (both)|tobacco
+tobacco|hs_globalexp|string|Global exposure of the child to ETS (4 categories)|tobacco
+tobacco|hs_globalexp2|string|Global exposure of the child to ETS (2 categories)|tobacco
+tobacco||integer|How many cigarettes did you smoke yesterday?|tobacco
+tobacco||integer|How many cigarrettes did you smoke in the last week?|tobacco
+tobacco||integer|Was your child in an indoor place where someone was smoking in the last week?|tobacco
+tobacco||integer|For how long was your child in an indoor place where someone was smoking on Monday|tobacco
+tobacco||integer|For how long was your child in an indoor place where someone was smoking on Tuesday|tobacco
+tobacco||integer|For how long was your child in an indoor place where someone was smoking on Wednesday|tobacco
+tobacco||integer|For how long was your child in an indoor place where someone was smoking on Thursday|tobacco
+tobacco||integer|For how long was your child in an indoor place where someone was smoking on Friday|tobacco
+tobacco||integer|For how long was your child in an indoor place where someone was smoking on Saturday|tobacco
+tobacco||integer|For how long was your child in an indoor place where someone was smoking on Sunday|tobacco
+clinical|h_sex|byte|Child's sex|clinical
+clinical|h_date_birth|int|Child's date of birth|clinical
+clinical||int|Date of clinical assessment|clinical
+clinical|hs_age_years|float|Age at clinical assessment (years)|clinical
+clinical|hs_c_height|double|Height (m)|clinical
+clinical|hs_c_weight|double|Weight (kg)|clinical
+clinical|hs_c_bmi|float|BMI (kg/m^2)|clinical
+clinical||float|WHO: Weight-for-age (age range: 0-10 years)|clinical
+clinical||float|WHO: Height-for-age (age range: 0-19 years)|clinical
+clinical||float|THEANO: BMI-for-age (age range: 0-19 years)|clinical
+clinical||byte|THEANO: BMI classification|clinical
+clinical||byte|IOTF: Overweight/Obesity classification - 3 categories|clinical
+clinical|hs_bp_sys|float|Systolic blood pressure, mean of 2nd & 3rd measurements|clinical
+clinical|hs_bp_dia|float|Diastolic blood pressure, mean of 2nd & 3rd measurements|clinical
+clinical||float|Systolic BP SD score|clinical
+clinical||float|Diastolic BP SD score|clinical
+clinical||byte|Hypertensive classification (3 categories)|clinical
+clinical|hs_waist|float|Waist circumference (cm)|clinical
+clinical|hs_midup_arm|float|Mid-upper arm circumference (cm)|clinical
+clinical|hs_head_circ|float|Head circumference (cm)|clinical
+clinical|hs_w2h|float|Waist-to-Height ratio|clinical
+clinical||byte|Waist-to-Height ratio above/below 0.5|clinical
+clinical||float|Waist circumference SD score, adjusted for age, sex|clinical
+clinical||byte|Percentiles of waist circumference SD score, adjusted for age, sex|clinical
+clinical||float|Mid-upper arm circumference SD score, adjusted for age, sex|clinical
+clinical|hs_tricep|float|Skinfold thickness - Triceps (mm)|clinical
+clinical|hs_subs_capular|float|Skinfold thickness - Subscapular (mm)|clinical
+clinical|hs_suprailiac|float|Skinfold thickness - Suprailiac (mm)|clinical
+clinical|hs_thigh|float|Skinfold thickness - Thigh (mm)|clinical
+clinical|hs_skf_sum4|float|Sum of skinfold thickness of all 4 points|clinical
+clinical|hs_skf_sum2|float|Sum of skinfold thickness of 2 points: Triceps & Subscapular|clinical
+clinical|hs_fatprop|float|Fat: %, Slaughter function|clinical
+clinical|hs_fatmass|float|Fat: Kgr, Goran function|clinical
+clinical|hs_freefatmass_bia|float|BIA: Free fat mass (Kg), Clasey function|clinical
+clinical|hs_fatmass_bia|float|BIA: Fat mass (Kg), Clasey function|clinical
+clinical|hs_fatprop_bia|float|BIA: Fat mass, percentage of total weight (%), Clasey function|clinical
+clinical||float|z-bmi WHO|clinical
+clinical||float|z-bmi categorized WHO|clinical
+clinical||float|Sex- and age- specific waist circumference z-score  that was used for the construction of the MetS score|clinical
+clinical||float|Log-transformed triglyceride values|clinical
+clinical||float|Sex- and age- specific triglyceride z-score (based on log values) that was used for the construction of the MetS score|clinical
+clinical|hs_hdlchol_mgdl|float|HDL cholesterol values|clinical
+clinical||float|Sex- and age- specific HDL z-score that was used for the construction of the MetS score|clinical
+clinical||float|Log2-transformed insulin values (obtained from the proteomics dataset)|clinical
+clinical||float|Sex- and age- specific Insulin z-score (based on log2 values) that was used for the construction of the MetS score|clinical
+clinical||float|Metabolic syndrome z score|clinical
+neuro||float|Dominant hand|neuro
+neuro||byte|number of correct rejections colors 1-back|nback
+neuro||byte|number of false alarms colors 1-back|nback
+neuro||byte|number of hits colors 1-back|nback
+neuro||byte|number of miss colors 1-back|nback
+neuro||double|Mean Hit Reaction Time colors 1-back|nback
+neuro||byte|number of correct rejections colors 2-back|nback
+neuro||byte|number of false alarms colors 2-back|nback
+neuro||byte|number of hits colors 2-back|nback
+neuro||byte|number of miss colors 2-back|nback
+neuro||double|Mean Hit Reaction Time colors 2-back|nback
+neuro||byte|number of correct rejections colors 3-back|nback
+neuro||byte|number of false alarms colors 3-back|nback
+neuro||byte|number of hits colors 3-back|nback
+neuro||byte|number of miss colors 3-back|nback
+neuro||double|Mean Hit Reaction Time colors 3-back|nback
+neuro||byte|number of correct rejections numbers 1-back|nback
+neuro||byte|number of false alarms numbers 1-back|nback
+neuro||byte|number of hits numbers 1-back|nback
+neuro||byte|number of miss numbers 1-back|nback
+neuro||double|Mean Hit Reaction Time numbers 1-back|nback
+neuro||byte|number of correct rejections numbers 2-back|nback
+neuro||byte|number of false alarms numbers 2-back|nback
+neuro||byte|number of hits numbers 2-back|nback
+neuro||byte|number of miss numbers 2-back|nback
+neuro||double|Mean Hit Reaction Time numbers 2-back|nback
+neuro||byte|number of correct rejections numbers 3-back|nback
+neuro||byte|number of false alarms numbers 3-back|nback
+neuro||byte|number of hits numbers 3-back|nback
+neuro||byte|number of miss numbers 3-back|nback
+neuro||double|Mean Hit Reaction Time numbers 3-back|nback
+neuro||float|Percentage of correct responses (hits and correct rejections) colors 1-back|nback
+neuro||float|detectability colors 1-back|nback
+neuro||float|Percentage of correct responses (hits and correct rejections) colors 2-back|nback
+neuro||float|detectability colors 2-back|nback
+neuro||float|Percentage of correct responses (hits and correct rejections) colors 3-back|nback
+neuro||float|detectability colors 3-back|nback
+neuro||float|Percentage of correct responses (hits and correct rejections) numbers 1-back|nback
+neuro||float|detectability numbers 1-back|nback
+neuro||float|Percentage of correct responses (hits and correct rejections) numbers 2-back|nback
+neuro||float|detectability numbers 2-back|nback
+neuro||float|Percentage of correct responses (hits and correct rejections) numbers 3-back|nback
+neuro||float|detectability numbers 3-back|nback
+neuro||byte|Number of incorrect responses|ANT
+neuro||int|Number of correct responses|ANT
+neuro||byte|Number of missing responses|ANT
+neuro||byte|Number of commissions|ANT
+neuro||double|Mean of HRTs for congruent trials|ANT
+neuro||double|Median of HRTs for congruent trials|ANT
+neuro||double|Mean of HRTs for incongruent trials|ANT
+neuro||double|Median of HRTs for incongruent trials|ANT
+neuro||double|Mean of HRTs for center cue trials|ANT
+neuro||double|Median of HRTs for center cue trials|ANT
+neuro||double|Mean of HRTs for double cue trials|ANT
+neuro||double|Median of HRTs for double cue trials|ANT
+neuro||double|Mean of HRTs for no cue trials|ANT
+neuro||double|Median of HRTs for no cue trials|ANT
+neuro||double|Mean of HRTs for spatial cue trials|ANT
+neuro||double|Median of HRTs for spatial cue trials|ANT
+neuro||double|Mean of HRTs for center cue and congruent trials|ANT
+neuro||double|Median of HRTs for center cue and congruent trials|ANT
+neuro||double|Mean of HRTs for double and congruent trials|ANT
+neuro||double|Median of HRTs for double and congruent trials|ANT
+neuro||double|Mean of HRTs for no cue and congruent trials|ANT
+neuro||double|Median of HRTs for no cue and congruent trials|ANT
+neuro||double|Mean of HRTs for spatial cue and congruent trials|ANT
+neuro||double|Median of HRTs for spatial cue and congruent trials|ANT
+neuro||float|Percentage of accuracy|ANT
+neuro||float|Alerting network|ANT
+neuro||float|Orienting network|ANT
+neuro||float|Conflict network|ANT
+neuro||float|Orienting endogenous network|ANT
+neuro||float|Orienting exogenous network|ANT
+neuro||double|Hit Reaction Time (mean)|ANT
+neuro||double|Hit Reaction Time (median)|ANT
+neuro||double|Hit Reaction Time Standard Error|ANT
+neuro||float|Sum of the 2 trials dominant hand|Tapping
+neuro||float|Sum of the 2 trials nondominant hand|Tapping
+neuro||float|Laterality Index (Harvard)|Tapping
+neuro||double|response time Trail Making Test A|TMT
+neuro||byte|Number of errors Trail Making Test A|TMT
+neuro||double|response time Trail Making Test B|TMT
+neuro||byte|Number of errors Trail Making Test B|TMT
+neuro||double|response time in seconds Trail Making Test A|TMT
+neuro||double|response time in seconds Trail Making Test B|TMT
+neuro||double|Total of correct|RAVEN
+neuro||double|Working time|RAVEN
+neuro|hs_Esc_AD|float|Anxious/depressed|CBCL
+neuro|hs_Esc_RD|float|Withdrawn/Depressed|CBCL
+neuro|hs_Esc_Som|float|Somatic complaints|CBCL
+neuro|hs_Esc_Soc|float|Social problems|CBCL
+neuro|hs_Esc_Pen|float|Thought problems|CBCL
+neuro|hs_Esc_Ate|float|Attention problems|CBCL
+neuro|hs_Esc_Nor|float|Rule-Breaking behavior|CBCL
+neuro|hs_Esc_Agr|float|Aggressive behavior|CBCL
+neuro|hs_Esc_Otr|float|Other problems|CBCL
+neuro|hs_DSM_Afe|float|DSM-Affective problems|CBCL
+neuro|hs_DSM_Ans|float|DSM-Anxiety problems|CBCL
+neuro|hs_DSM_Som|float|DSM-Somatic problems|CBCL
+neuro|hs_DSM_TDAH|float|DSM-ADHD problems|CBCL
+neuro|hs_DSM_Opo|float|DSM-Oppositional problems|CBCL
+neuro|hs_DSM_Con|float|DSM-Conduct problems|CBCL
+neuro|hs_Gen_Int|float|Internalizing scales|CBCL
+neuro|hs_Gen_Ext|float|Externalizing scales|CBCL
+neuro|hs_Gen_Tot|float|Total problems|CBCL
+neuro|hs_Oposic_raw|float|Oppositional|Conners
+neuro|hs_Cognit_raw|float|Cognitive Problems/Inattention|Conners
+neuro|hs_Hyper_raw|float|Hyperactivity|Conners
+neuro|hs_ADHD_raw|float|ADHD Index|Conners
+neuro|hs_ADHD_raw_Cat|float|ADHD Index cut-off|Conners
+neuro||byte|number of correct rejections numbers 2-back|nback_mother
+neuro||byte|number of false alarms numbers 2-back|nback_mother
+neuro||byte|number of hits numbers 2-back|nback_mother
+neuro||byte|number of miss numbers 2-back|nback_mother
+neuro||double|Mean Hit Reaction Time numbers 2-back|nback_mother
+neuro||byte|number of correct rejections numbers 3-back|nback_mother
+neuro||byte|number of false alarms numbers 3-back|nback_mother
+neuro||byte|number of hits numbers 3-back|nback_mother
+neuro||byte|number of miss numbers 3-back|nback_mother
+neuro||double|Mean Hit Reaction Time numbers 3-back|nback_mother
+neuro||float|Percentage of correct responses (hits and correct rejections) numbers 2-back|nback_mother
+neuro||float|detectability numbers 2-back|nback_mother
+neuro||float|Percentage of correct responses (hits and correct rejections) numbers 3-back|nback_mother
+neuro||float|detectability numbers 3-back|nback_mother
+neuro||byte|number of correct rejections numbers 2-back|nback_father
+neuro||byte|number of false alarms numbers 2-back|nback_father
+neuro||byte|number of hits numbers 2-back|nback_father
+neuro||byte|number of miss numbers 2-back|nback_father
+neuro||double|Mean Hit Reaction Time numbers 2-back|nback_father
+neuro||byte|number of correct rejections numbers 3-back|nback_father
+neuro||byte|number of false alarms numbers 3-back|nback_father
+neuro||byte|number of hits numbers 3-back|nback_father
+neuro||byte|number of miss numbers 3-back|nback_father
+neuro||double|Mean Hit Reaction Time numbers 3-back|nback_father
+neuro||float|Percentage of correct responses (hits and correct rejections) numbers 2-back|nback_father
+neuro||float|detectability numbers 2-back|nback_father
+neuro||float|Percentage of correct responses (hits and correct rejections) numbers 3-back|nback_father
+neuro||float|detectability numbers 3-back|nback_father
+neuro|GPF|double|General psychopathology factor (GPF)|pfactor
+neuro|INT|double|Internalizing (symptom-specific factor)|pfactor
+neuro|EXT|double|Externalizing (symptom-specific factor)|pfactor
+respiratory||character|Wheezing or whistling in the chest the last year|Asthma_wheezing
+respiratory||character|Number of attacks of wheezing  the last year|Asthma_wheezing
+respiratory||character|Frequency of sleep disturbance due to wheezing the last year|Asthma_wheezing
+respiratory||character|Wheezing  severe enough to limit your childs speech to only one or two words at a time between breaths (the last year)|Asthma_wheezing
+respiratory|hs_asthma|character|Doctor diagnosed asthma (ever)|Asthma_wheezing
+respiratory||integer|Age when doctor diagnosed with asthma|Asthma_wheezing
+respiratory||character|Medication for asthma or breathing difficulties (wheezing, chest tightness, shortness of breath) in the last year|Asthma_wheezing
+respiratory||character|Rhinitis last 12 months: Problems with sneezing, or a runny, or blocked nose without having a cold or the flu|Allergic_Rhinitis
+respiratory||bool|Rhinitis last 12 months with sneezing:|Allergic_Rhinitis
+respiratory||bool|Rhinitis last 12 months with runny nose|Allergic_Rhinitis
+respiratory||bool|Rhinitis last 12 months with blocked nose|Allergic_Rhinitis
+respiratory||bool|Rhinitis last 12 months with ichty eyes|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms occuring in January|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms occuring in February|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms occuring in March|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms occuring in April|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms occuring in May|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms occuring in June|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms occuring in July|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms occuring in August|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms occuring in September|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms occuring in October|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms occuring in November|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms occuring in December|Allergic_Rhinitis
+respiratory||bool|Rhinitis without symptoms in nose or eyes|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms associated with animals|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms associated with grass, trees or flowers|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms associated with house dust/house dust mite|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms associated with tobaccco smoke or heavy scent|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms associated with air pollutants|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms associated with other triggers|Allergic_Rhinitis
+respiratory||character|Rhinitis symptoms associated with other triggers. Specified|Allergic_Rhinitis
+respiratory||character|Rhinitis: medicines taken against nasal allergy/hay fever/Allergic_Rhinitis In in the last year|Allergic_Rhinitis
+respiratory||bool|Rhinitis with itchy-watery eyes|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms in December-February|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms in March-May|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms in June-August|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms in September-November|Allergic_Rhinitis
+respiratory||bool|Rhinitis symptoms in all four seasons (perennial)|Allergic_Rhinitis
+respiratory||character|Dry skin the last 12 months|Eczema
+respiratory||character|Itchy rash: Itchy rash which was intermittently coming and going at any time in the past 12 months|Eczema
+respiratory||character|Itchy rash at any time in the last year|Eczema
+respiratory||bool|Itchy rash on fold of the elbows|Eczema
+respiratory||bool|Itchy rash behind the knees|Eczema
+respiratory||bool|Itchy rash in front of the ankles|Eczema
+respiratory||bool|Itchy rash under the buttocks|Eczema
+respiratory||bool|Itchy rash around the neck, ears of face|Eczema
+respiratory||bool|Itchy rash on other parts of the body|Eczema
+respiratory||character|Rash cleared completely at any time during in the last year|Eczema
+respiratory||bool|Itchy rash in January|Eczema
+respiratory||bool|Itchy rash in February|Eczema
+respiratory||bool|Itchy rash in March|Eczema
+respiratory||bool|Itchy rash in April|Eczema
+respiratory||bool|Itchy rash in May|Eczema
+respiratory||bool|Itchy rash in June|Eczema
+respiratory||bool|Itchy rash in July|Eczema
+respiratory||bool|Itchy rash in August|Eczema
+respiratory||bool|Itchy rash in September|Eczema
+respiratory||bool|Itchy rash in October|Eczema
+respiratory||bool|Itchy rash in November|Eczema
+respiratory||bool|Itchy rash in December|Eczema
+respiratory||character|Doctor diagnosed eczema or atopic dermatitis or neurodermatitis|Eczema
+respiratory||character|Food_Allergy (ever)|Food_Allergy
+respiratory||character|Allergic reaction caused by cows milk|Food_Allergy
+respiratory||integer|Age when the allergic reaction to cows milk first occurred|Food_Allergy
+respiratory||character|Still have allergy to cows milk|Food_Allergy
+respiratory||character|Allergic reaction caused by egg|Food_Allergy
+respiratory||integer|Age when the allergic reaction to egg first occurred|Food_Allergy
+respiratory||character|Still have allergy to egg|Food_Allergy
+respiratory||character|Allergic reaction caused by wheat|Food_Allergy
+respiratory||integer|Age when the allergic reaction to wheat first occurred|Food_Allergy
+respiratory||character|Still have allergy to wheat|Food_Allergy
+respiratory||character|Allergic reaction caused by codfish|Food_Allergy
+respiratory||integer|Age when the allergic reaction to cows codfish occurred|Food_Allergy
+respiratory||character|Still have allergy to codfish|Food_Allergy
+respiratory||character|Allergic reaction caused by soy|Food_Allergy
+respiratory||integer|Age when the allergic reaction to soy first occurred|Food_Allergy
+respiratory||character|Still have allergy to soy|Food_Allergy
+respiratory||character|Allergic reaction caused by peanut|Food_Allergy
+respiratory||integer|Age when the allergic reaction to peanut first occurred|Food_Allergy
+respiratory||character|Still have allergy to peanut|Food_Allergy
+respiratory||character|Allergic reaction caused by other item|Food_Allergy
+respiratory||character|Food_Allergy: Specify the food item|Food_Allergy
+respiratory||integer|Age when the allergic reaction to the other food item first occurred|Food_Allergy
+respiratory||character|Still have allergy to the other food item|Food_Allergy
+respiratory||character|Has your child had a common cold the last 12 months|Common_Infections
+respiratory||integer|How many times your child had a common cold in the last year|Common_Infections
+respiratory||character|Has your child had flu in the last 12 months|Common_Infections
+respiratory||integer|How many times your child had flu in the last year|Common_Infections
+respiratory||character|Has your child had pneumonia/bronchitis in the last 12 months|Common_Infections
+respiratory||integer|How many times your child had pneumonia/bronchitis in the last year|Common_Infections
+respiratory||character|Has your child had otitis media in the last 12 months|Common_Infections
+respiratory||integer|How many times your child had otitis media in the last year|Common_Infections
+respiratory||character|Has your child had gastroenteritis with vomiting or diarrhoea in the last 12 months|Common_Infections
+respiratory||integer|How many times your child had gastroenteritis with vomiting or diarrhoea in the last year|Common_Infections
+respiratory||character|Has your child had urinary tract infection in the last 12 months|Common_Infections
+respiratory||integer|How many times your child had urinary tract infection in the last year|Common_Infections
+respiratory||character|Have you (the child’s mother) ever had eczema (excluding contact dermatitis and psoriasis)|Family_history
+respiratory||integer|How old were you (the child'd mother) at the onset of your eczema|Family_history
+respiratory||character|Have you (the child’s mother) ever had asthma|Family_history
+respiratory||integer|How old were you (the child'd mother) at the onset of your asthma|Family_history
+respiratory||character|Have you (the child’s mother) ever had hayfever or Allergic_Rhinitis|Family_history
+respiratory||integer|How old were you (the child'd mother) at the onset of your hayfever or Allergic_Rhinitis|Family_history
+respiratory||character|Has the child’s father ever had eczema (excluding contact dermatitis and psoriasis)?|Family_history
+respiratory||integer|How old was he at the onset of his eczema|Family_history
+respiratory||character|Has the child’s father ever had asthma|Family_history
+respiratory||integer|How old was he at the onset of his asthma|Family_history
+respiratory||character|Has the child’s father ever had hayfever or Allergic_Rhinitis|Family_history
+respiratory||integer|How old was he at the onset of his hayfever or Allergic_Rhinitis|Family_history
+respiratory||bool|Itchy rash (intermittently) in December-February|Eczema
+respiratory||bool|Itchy rash (intermittently) in March-May|Eczema
+respiratory||bool|Itchy rash (intermittently) in June-August|Eczema
+respiratory||bool|Itchy rash (intermittently) in September-November|Eczema
+respiratory||bool|Itchy rash (intermittently) in all four seasons (perennial)|Eczema
+spirometry||integer|Curve identification number|Curve_characteristic
+spirometry||string|Examination number|Curve_characteristic
+spirometry||date|Date of examination|Curve_characteristic
+spirometry||time|Time of trial|Curve_characteristic
+spirometry||integer|Number of trials in the given examination|Curve_characteristic
+spirometry||integer|Trial number in the given examination|Curve_characteristic
+spirometry||decimal|Length of flow/volume curve|Curve_characteristic
+spirometry||decimal|Length of volume/time curve|Curve_characteristic
+spirometry||integer|Technician performing the examination|Curve_characteristic
+spirometry||decimal|Time zero from back extrapolation (s)|Curve_characteristic
+spirometry||bool|Test was a post test (No=0, Yes=1)|Curve_characteristic
+spirometry||integer|QCGrade from the spirometry machine|Curve_characteristic
+spirometry||bool|Test was accepted by the spirometry machine (No=0, Yes=1)|Curve_characteristic
+spirometry|HelixID|string|HELIX identification number|Child_characteristic
+spirometry|cohort|string|Cohort name|Child_characteristic
+spirometry||string|Panel (sub or cp2)|Child_characteristic
+spirometry|hs_Ethnic|string|Ethnicity of the child (data from the spirometry machine)|Child_characteristic
+spirometry|hs_Gender|string|Gender of the child|Child_characteristic
+spirometry|hs_Smoker|integer|Smoking status of the mother|Child_characteristic
+spirometry|hs_Asthma_spiro|integer|Asthma status  (data from the spirometry machine)|Child_characteristic
+spirometry||date|Date of birth of the child|Child_characteristic
+spirometry|hs_Age|decimal|Age of the child at the time of examination|Child_characteristic
+spirometry|hs_Height|decimal|Height of the child at the time of examination|Child_characteristic
+spirometry|hs_Weight|decimal|Weight of the child at the time of examination|Child_characteristic
+spirometry||string|Wheezing from the HELIX questionnaire|Child_characteristic
+spirometry|hs_Asthma_HelixQuest|string|Asthma status from the HELIX questionnaire|Child_characteristic
+spirometry||string|Medical asthma status from the HELIX questionnaire|Child_characteristic
+spirometry||decimal|Time between panel 1 and panel 2 test (in days)|Child_characteristic
+spirometry||decimal|Height difference between panel 1 and panel 2 test|Child_characteristic
+spirometry||decimal|Weight difference between panel 1 and panel 2 test (in days)|Child_characteristic
+spirometry||decimal|Forced expiratory volume in 1 second (L)|Spirometry_data
+spirometry||decimal|Forced expiratory volume in 6 seconds (L)|Spirometry_data
+spirometry||decimal|Forced Vital capacity (L)|Spirometry_data
+spirometry||decimal|Peak expiratory flow (L/s)|Spirometry_data
+spirometry||decimal|Back extrapolated volume (L)|Spirometry_data
+spirometry||decimal|Forced Expiratory Time (s)|Spirometry_data
+spirometry||decimal|Peak Expiratory Flow Time (s)|Spirometry_data
+spirometry||decimal|Forced expiratory flow 25% (l/s)|Spirometry_data
+spirometry||decimal|Forced expiratory flow 50% (l/s)|Spirometry_data
+spirometry||decimal|Forced expiratory flow 75% (l/s)|Spirometry_data
+spirometry||decimal|Forced expiratory flow 25% to 75% (l/s)|Spirometry_data
+spirometry||decimal|Forced expiratory volume in 3 second (L)|Spirometry_data
+spirometry||decimal|Forced inspiratory vital capacity (L)|Spirometry_data
+spirometry||decimal|VCmax|Spirometry_data
+spirometry||decimal|End Of test volume (L)|Spirometry_data
+spirometry||decimal|Peak inspiratory flow (L/s)|Spirometry_data
+spirometry||decimal|Forced inspiratory flow 25% (L/s)|Spirometry_data
+spirometry||decimal|Forced inspiratory flow 50% (L/s)|Spirometry_data
+spirometry||decimal|Forced inspiratory flow 75% (L/s)|Spirometry_data
+spirometry||decimal|Forced expiratory volume in 1 second percent predicted value|Spirometry_data
+spirometry||decimal|Forced Vital capacity percent predicted value|Spirometry_data
+spirometry||decimal|Forced expiratory volume in 1 second over Forced Vital capacity rate percent predicted value|Spirometry_data
+spirometry||decimal|Forced expiratory flow 25% to 75% percent predicted value|Spirometry_data
+spirometry||decimal|BEV/FVC rate|Spirometry_data
+spirometry||decimal|FEV1/FVC rate|Spirometry_data
+spirometry||bool|FEV1/FVC rate>90%|Spirometry_data
+spirometry||bool|FEV1/FVC rate>95%|Spirometry_data
+spirometry||bool|Curve meeting the acceptibility criteria for FEV1 (No=0, Yes=1)|Acceptance_test
+spirometry||bool|Examination meeting the loose reproducibility criteria for FEV1 (No=0, Yes=1)|Acceptance_test
+spirometry||bool|Examination meeting the stringent reproducibility criteria for FEV1 (No=0, Yes=1)|Acceptance_test
+spirometry||bool|Curve selected as per the loose criteria set for FEV1 (No=0, Yes=1)|Acceptance_test
+spirometry||bool|Curve selected as per the stringent criteria set for FEV1 (No=0, Yes=1)|Acceptance_test
+spirometry||bool|Curve meeting the acceptibility criteria for FVC (No=0, Yes=1)|Acceptance_test
+spirometry||bool|Examination meeting the loose reproducibility criteria for FVC (No=0, Yes=1)|Acceptance_test
+spirometry||bool|Examination meeting the stringent reproducibility criteria for FVC (No=0, Yes=1)|Acceptance_test
+spirometry||bool|Curve selected as per the loose criteria set for FVC (No=0, Yes=1)|Acceptance_test
+spirometry||bool|Curve selected as per the stringent criteria set for FVC (No=0, Yes=1)|Acceptance_test
+OTHERS||NA|Do you have any pets that live mainly in your home?  (recode from quetsys)|pets
+OTHERS||NA|Do you have any cats that live mainly in your home? (recode from quetsys)|pets
+OTHERS||NA|Do you have any dogs that live mainly in your home?  (recode from quetsys)|pets
+OTHERS|hs_numsiblings|NA|number of siblings|misc
+OTHERS||NA|time of sample collection|NA
+OTHERS||NA|hairV9y collection|NA
+OTHERS||NA|Item 2 of PSS-4 (Negative)|NA
+OTHERS||NA|Item 6 of PSS-4 (Positive)|NA
+OTHERS||NA|Item 7 of PSS-4 (Positive)|NA
+OTHERS||NA|Item 14 of PSS-4 (Negative)|NA
+OTHERS||NA|Item 2 of PSS-4 (Negative) count|NA
+OTHERS||NA|Item 6 of PSS-4 (Positive) Count|NA
+OTHERS||NA|Item 7 of PSS-4 (Positive) Count|NA
+OTHERS||NA|Item 14 of PSS-4 (Negative) Count|NA
+OTHERS||NA|Perceved Stress Scale-4 Total Score|NA
