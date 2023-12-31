@@ -1,1 +1,102 @@
+---
+title: Introduction to the use of weights for sampling/selection bias
+author: Lorenzo Fabbri
+format:
+  revealjs:
+    theme: moon
+    embed-resources: true
+bibliography: ../docs/bibliography.bib
+link-citations: true
+linkcolor: blue
+editor_options:
+  chunk_output_type: console
+---
 
+---
+nocite: |
+  @*
+---
+
+## Selection bias
+
+- From the subjects belonging to the HELIX sub-cohort (0th follow-up), only a fraction took part to the follow-up (1st follow-up).
+- That is, among the eligible subjects, some are going to be excluded from our analyses since they have e.g., no outcome.
+- Censoring from the analysis those with missing values might introduce **selection bias**.
+
+## A simple example {.smaller}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- Suppose exposure `A` is a measure of SEP and outcome `Y` is diagnosis of ADHD. The censoring variable `C` is a collider on this pathway, and `L` is a confounder. To estimate the effect of `A` on `Y` we should NOT adjust for `C` (@fig-dag-bias).
+:::
+
+::: {.column width="60%"}
+```{r}
+#| fig-cap: "Effect estimation with selection bias"
+#| label: fig-dag-bias
+#| fig-width: 7
+#| fig-height: 7
+
+dag <- ggdag::dagify(
+  C ~ A + Y,
+  Y ~ A + L,
+  A ~ L,
+  exposure = "A",
+  outcome = "Y",
+  coords = list(
+    x = c(A = 0, Y = 1, C = 0.5, L = 0.5),
+    y = c(A = 0, Y = 0, C = 0.5, L = -0.5)
+  )
+)
+dag |>
+  ggdag::ggdag_adjustment_set(shadow = TRUE) +
+  ggdag::theme_dag()
+```
+:::
+
+:::
+
+## A simple example
+
+- The problem is that in the 1st follow-up, we are implicitly adjusting for `C` as well, thus opening another path.
+- Thus, censoring due to loss to follow-up can introduce selection bias. Generally, we are interested then in estimating an effect if nobody had been censored. If `A` is binary, we are interested in:
+
+  $$E[Y ^ {a=1,c=0}] - E[Y ^ {a=0,c=0}],$$
+
+  which is the joint effect of `A` and `C`.
+
+## Reducing the effects of selection bias {.smaller}
+
+- **IP weights** can be used to estimate [^1] our causal effect (to estimate the parameters of the MSM $E[Y^{a,c=0}] = \beta_0 + \beta_1a$):
+
+  $$W ^ {A,C} = W^A \times W^C,$$
+  
+  with $W^C = 1 / Pr[C=0|L,A]$ ($W^C=0$ for the censored), and $W^A$ being the weights to adjust for confounding ($f(A|L)$).
+
+- Alternatively, we can compute the *stabilized* IP weights:
+  
+  $$SW^C = Pr[C=0|A] / Pr[C=0|L,A].$$
+
+- Alternatively, we can use standardization (outcome modeling) to adjust for confounding and selection bias.
+
+
+[^1]: Under the identifiability conditions for the joint treatment $(A,C)$ conditional on $L$.
+
+## An actual example {.smaller}
+
+- *Reweighting the UK Biobank to reflect its underlying sampling population substantially reduces pervasive selection bias due to volunteering* [@van2022reweighting].
+- UKB is not representative of the underlying sampling population. That is, among all the subjects eligible, most did not take part (*volunteer bias*).
+- The authors modeled the selection process to correct for such biases using inverse probability weights, with data from the UK census [^2].
+-
+
+[^2]: I guess the same could be done for the HELIX cohort in pregnancy.
+
+## The `SelectionWeights` R package
+
+## What's next?
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
