@@ -3,6 +3,7 @@ title: Introduction to the use of weights for sampling/selection bias
 author: Lorenzo Fabbri
 institute: ISGlobal
 date: today
+embed-resources: true
 slide-number: true
 progress: true
 format:
