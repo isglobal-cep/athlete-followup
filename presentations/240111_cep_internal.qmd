@@ -1,6 +1,10 @@
 ---
 title: Introduction to the use of weights for sampling/selection bias
 author: Lorenzo Fabbri
+institute: ISGlobal
+date: today
+slide-number: true
+progress: true
 format:
   revealjs:
     theme: moon
@@ -62,21 +66,21 @@ dag |>
 - The problem is that in the 1st follow-up, we are implicitly adjusting for `C` as well, thus opening another path.
 - Thus, censoring due to loss to follow-up can introduce selection bias. Generally, we are interested then in estimating an effect if nobody had been censored. If `A` is binary, we are interested in:
 
-  $$E[Y ^ {a=1,c=0}] - E[Y ^ {a=0,c=0}],$$
+  $$E\left[Y ^ {a=1,c=0}\right] - E\left[Y ^ {a=0,c=0}\right],$$
 
   which is the joint effect of `A` and `C`.
 
 ## Reducing the effects of selection bias {.smaller}
 
-- **IP weights** can be used to estimate [^1] our causal effect (to estimate the parameters of the MSM $E[Y^{a,c=0}] = \beta_0 + \beta_1a$):
+- **IP weights** can be used to estimate [^1] our causal effect (to estimate the parameters of the MSM $E\left[Y^{a,c=0}\right] = \beta_0 + \beta_1a$):
 
   $$W ^ {A,C} = W^A \times W^C,$$
   
-  with $W^C = 1 / Pr[C=0|L,A]$ ($W^C=0$ for the censored), and $W^A$ being the weights to adjust for confounding ($f(A|L)$).
+  with $W^C = 1 / Pr\left[C=0|L,A\right]$ ($W^C=0$ for the censored), and $W^A$ being the weights to adjust for confounding ($f(A|L)$).
 
 - Alternatively, we can compute the *stabilized* IP weights:
   
-  $$SW^C = Pr[C=0|A] / Pr[C=0|L,A].$$
+  $$SW^C = Pr\left[C=0|A\right] / Pr\left[C=0|L,A\right].$$
 
 - Alternatively, we can use standardization (outcome modeling) to adjust for confounding and selection bias.
 
@@ -88,13 +92,56 @@ dag |>
 - *Reweighting the UK Biobank to reflect its underlying sampling population substantially reduces pervasive selection bias due to volunteering* [@van2022reweighting].
 - UKB is not representative of the underlying sampling population. That is, among all the subjects eligible, most did not take part (*volunteer bias*).
 - The authors modeled the selection process to correct for such biases using inverse probability weights, with data from the UK census [^2].
--
 
 [^2]: I guess the same could be done for the HELIX cohort in pregnancy.
 
-## The `SelectionWeights` R package
+## The `SelectionWeights` R package {.smaller}
+
+- Since weight estimation depends on question-specific confounders and eventually exposures, it makes sense for the researcher to estimate them directly.
+- The aim (work in progress) is to create a R package ([`SelectionWeights`](https://github.com/isglobal-cep/SelectionWeights)) for that:
+
+``` {r}
+#| echo: true
+#| eval: false
+
+sel_weights <- SelectionWeights::estimate_selection_weights(
+  dat = dat,
+  id_str = "HelixID",
+  ids_not_censored = ids_not_censored,
+  formula = "sex + age + SEP",
+  method_estimation = "glm",
+  link_function = "gaussian",
+  stabilized = TRUE,
+  winsorization = 0.9,
+  estimate_by = "cohort",
+  sampling_weights = NULL,
+  moments = NULL,
+  interactions = NULL,
+  library_sl = NULL,
+  cv_control_sl = NULL,
+  discrete_sl = NULL
+)
+
+mod <- glm(
+  outcome ~ exposure + sex + age + SEP,
+  data = dat,
+  weights = sel_weights
+)
+```
+
+## Exploring balance {.nostretch .smaller}
+
+- Whether the estimated weights are actually *working*, can be determined with *tools* like the Love plot.
+
+![Love plot](artwork/love_plot_example.png){width=500}
+
+- Another element to take into account is the effective sample size after weighting.
 
 ## What's next?
+
+- Finish the R package, including option to export the results in a nice format (e.g., `docx` tables for your papers).
+- Add a vignette to explain what it does and how to use it.
+- Add some unit tests to assess code correctness.
 
 # References {.unnumbered}
 
