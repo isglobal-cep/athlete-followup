@@ -1,4 +1,5 @@
 docs/HELIX*
+*.quarto/
 
 # History files
 .Rhistory

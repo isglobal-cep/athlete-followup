@@ -97,7 +97,7 @@ $$ {#eq-weights}
 with $W^C = 1 / Pr\left[C=0|L,A\right]$ ($W^C=0$ for the censored), and $W^A$ being the weights to adjust for confounding ($f(A|L)$). Alternatively, we can compute *stabilized* IP weights:
   
 $$
-SW^C = Pr\left[C=0|A\right] / Pr\left[C=0|L,A\right].
+SW^C = \frac{Pr\left[C=0|A\right]}{Pr\left[C=0|L,A\right]}.
 $$
 
 With IP weights, we are effectively modeling the censoring mechanism given the exposure and a set of covariates (e.g., sex and age). Another strategy consists in directly modeling the outcome (standardization). In this case, instead of using weights to adjust for confounding and selection bias, we are directly including theses variables in the outcome model:
@@ -132,27 +132,45 @@ dat$c <- with(dat, rbinom(
   prob = (censoring_mech - min(censoring_mech)) /
     (max(censoring_mech) - min(censoring_mech))
 ))
+dat$c <- as.factor(dat$c)
 ```
 
-We can now proceed to estimate the balancing weights for selection bias, assuming that the censoring mechanism solely involves the variables `educ`, `age`, and `race`. We will use the `energy` method, which is not based on any parametric assumption. Some of the estimated weights are considered *extreme* (you can check this with the `summary` function applied to the returning object, which provides other useful information like the effective sample size before and after weighting). We therefore trim/winsorize them.
+We can now proceed to estimate the balancing weights for selection bias, assuming that the censoring mechanism solely involves the variables `educ`, `age`, and `race`. We will fit a simple generalized linear model, although it is recommended to test also other methods that do not make such strong parametric assumptions (e.g., the `energy` method). Some of the estimated weights might be considered *extreme* (you can check this with the `summary` function applied to the returning object, which provides other useful information like the effective sample size before and after weighting). We therefore might want to trim/winsorize them.
 
 ```{r est-weights}
 est_sel_weights <- WeightIt::weightit(
-  formula = c ~ educ + age + race,
+  c ~ educ + age + race,
   data = dat,
-  method = "energy"
+  method = "glm"
 )
 summary(est_sel_weights)
 
 est_sel_weights_trim <- WeightIt::trim(
   est_sel_weights,
-  at = 0.7,
+  at = 0.9,
   lower = TRUE
 )
 summary(est_sel_weights_trim)
 ```
 
-We can visually check whether the estimated weights are effectively capable of reducing the effect of the chosen covariates on the censoring mechanism using a so-called *Love plot*. Ideally, we would like to see that the adjusted values are as close as possible to zero. Deviations from this should be solved for instance by choosing another fitting method and/or by modifying the trimming value.
+In @fig-viz-ps you can see the distribution of the propensity scores for both *treatment* levels, in the unadjusted and adjusted samples.
+
+```{r viz-ps}
+#| fig-cap: "Propensity scores"
+#| label: fig-viz-ps
+#| fig-width: 5
+#| fig-height: 5
+
+cobalt::bal.plot(
+  est_sel_weights_trim,
+  var.name = "prop.score",
+  which = "both",
+  type = "histogram",
+  mirror = TRUE
+)
+```
+
+We can visually check whether the estimated weights are effectively capable of reducing the effect of the chosen covariates on the censoring mechanism using a so-called *Love plot* (@fig-check-bal). Ideally, we would like to see that the adjusted values are as close as possible to zero. Deviations from this should be solved for instance by choosing another fitting method and/or by modifying the trimming value.
 
 ```{r check-bal}
 #| fig-cap: "Love plot"
@@ -164,10 +182,11 @@ cobalt::love.plot(
   est_sel_weights_trim,
   stats = ifelse(
     type_exposure == "continuous",
-    "correlations",
-    "mean.diffs"
+    c("correlations"),
+    c("mean.diffs")
   ),
-  abs = FALSE,
+  binary = "std",
+  abs = TRUE,
   var.order = "unadjusted",
   thresholds = c(cor = 0.1, m = 0.1),
   line = TRUE,
@@ -184,19 +203,52 @@ fit <- glm(
 )
 ```
 
+We can compare the estimated coefficient of `treat` with that of a model without weights (@tbl-compare-glm).
+
+```{r glm-null}
+fit_null <- glm(
+  formula = re78 ~ treat + age + educ + nodegree + race,
+  weights = NULL,
+  data = dat
+)
+```
+
+```{r compare-glm}
+#| label: tbl-compare-glm
+#| tbl-cap: Comparison of estimated coefficients
+#| echo: false
+
+summ_null <- gtsummary::tbl_regression(
+  fit_null,
+  include = "treat"
+)
+summ_w <- gtsummary::tbl_regression(
+  fit,
+  include = "treat"
+)
+gtsummary::tbl_merge(
+  list(summ_null, summ_w),
+  tab_spanner = c("No weights", "With weights")
+) |>
+  gtsummary::as_gt()
+```
+
 ## The `SelectionWeights` R package
 
 TBD.
 
 # Suggestions
 
+## Selection of covariates
+
+We strongly advise against the practice of selecting covariates to estimate the weights based on *p*-values of the associations between covariates and censoring. Instead, these variables should be selected based on *a priori* knowledge. Covariates that might be involved in the censoring mechanism include: cohort, sex and age of the subject, socioeconomic factors, season of visit, health status of the subject (e.g., presence of a debilitating health condition). It is also important to note that not all missing values are created equal: the reason why a individual did not take part in the follow-up might also be relevant (e.g., not wanting to take part or not being able to contact them).
+
 We would like to further provide some suggestions based on previous experience.
 
-- It is useful to compare the results (e.g., predicted outcome or exposure coefficient) with and without IP weights, to check whether something went wrong during the estimation process. This information can be put in the supplementary material.
+- There might be significant differences in terms of censoring mechanism between cohorts. It might be useful to estimate the balancing weights for each cohort separately.
+- Consider computing standard errors using a robust method (see vignette).
 - It might be useful to provide further information about the balancing. More tools are available in the `cobalt` R package [@cobalt].
-
-- Use robust SEs.
-- By cohort estimation.
+- It might be useful to compare the results (e.g., predicted outcome or exposure coefficient) with and without IP weights, to check whether something went wrong during the estimation process. This information can be put in the supplementary material.
 
 # References {.unnumbered}
 
